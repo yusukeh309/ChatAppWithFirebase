@@ -17,6 +17,7 @@ class ChatRoomTableViewCell: UITableViewCell {
 
             messageTextViewWidthConstraint.constant = witdh
             messageTextView.text = text
+            
         }
     }
     
