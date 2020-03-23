@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="134" id="Dov-Sb-KzP" customClass="ChatRoomTableViewCell" customModule="ChatAppWithFirebase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dov-Sb-KzP" id="eox-0o-0lE">
+                <rect key="frame" x="0.0" y="0.0" width="472" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vince_carter" translatesAutoresizingMaskIntoConstraints="NO" id="amO-CG-9wQ">
+                        <rect key="frame" x="15" y="37" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="amO-CG-9wQ" secondAttribute="height" multiplier="1:1" id="7kw-9s-vpM"/>
+                            <constraint firstAttribute="width" constant="60" id="ei3-Tb-dF5"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージがここにはいります。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-ge-82F">
+                        <rect key="frame" x="85" y="25" width="250" height="84"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="Flx-cE-My1"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXT-bB-31R">
+                        <rect key="frame" x="340" y="78" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QDK-ge-82F" firstAttribute="top" secondItem="eox-0o-0lE" secondAttribute="top" constant="25" id="5fb-3H-VIZ"/>
+                    <constraint firstItem="GXT-bB-31R" firstAttribute="leading" secondItem="QDK-ge-82F" secondAttribute="trailing" constant="5" id="6Ml-fk-uBs"/>
+                    <constraint firstItem="amO-CG-9wQ" firstAttribute="centerY" secondItem="eox-0o-0lE" secondAttribute="centerY" id="J8x-xs-q5T"/>
+                    <constraint firstAttribute="bottom" secondItem="QDK-ge-82F" secondAttribute="bottom" constant="25" id="jgA-vW-8p0"/>
+                    <constraint firstItem="QDK-ge-82F" firstAttribute="leading" secondItem="amO-CG-9wQ" secondAttribute="trailing" constant="10" id="p1h-XO-pwU"/>
+                    <constraint firstItem="QDK-ge-82F" firstAttribute="bottom" secondItem="GXT-bB-31R" secondAttribute="bottom" constant="10" id="vmV-LV-Mkm"/>
+                    <constraint firstItem="amO-CG-9wQ" firstAttribute="leading" secondItem="eox-0o-0lE" secondAttribute="leading" constant="15" id="x3i-l7-PAv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="GXT-bB-31R" id="cRK-8u-Z3F"/>
+                <outlet property="messageTextView" destination="QDK-ge-82F" id="eJM-3b-vnL"/>
+                <outlet property="messageTextViewWidthConstraint" destination="Flx-cE-My1" id="FAA-L5-WsY"/>
+                <outlet property="userImageView" destination="amO-CG-9wQ" id="sAA-1B-fgp"/>
+            </connections>
+            <point key="canvasLocation" x="366.66666666666669" y="186.16071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="vince_carter" width="360" height="213"/>
+    </resources>
+</document>
