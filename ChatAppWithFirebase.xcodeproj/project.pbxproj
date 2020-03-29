@@ -20,6 +20,8 @@
 		7CC6A596242CDEE900737DFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6A595242CDEE900737DFA /* SignUpViewController.swift */; };
 		7CE98D01242F1C5C00A0AAA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CE98D00242F1C5C00A0AAA5 /* GoogleService-Info.plist */; };
 		7CE98D05242F589F00A0AAA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE98D04242F589F00A0AAA5 /* User.swift */; };
+		7CE98D07242F678A00A0AAA5 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE98D06242F678A00A0AAA5 /* UserList.storyboard */; };
+		7CE98D09242F687800A0AAA5 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE98D08242F687800A0AAA5 /* UserListViewController.swift */; };
 		7CFDAB24241E6E3C005B2023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDAB23241E6E3C005B2023 /* AppDelegate.swift */; };
 		7CFDAB26241E6E3C005B2023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDAB25241E6E3C005B2023 /* SceneDelegate.swift */; };
 		7CFDAB2D241E6E3D005B2023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFDAB2C241E6E3D005B2023 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		7CC6A595242CDEE900737DFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7CE98D00242F1C5C00A0AAA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CE98D04242F589F00A0AAA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7CE98D06242F678A00A0AAA5 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		7CE98D08242F687800A0AAA5 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		7CFDAB20241E6E3C005B2023 /* ChatAppWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAppWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFDAB23241E6E3C005B2023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CFDAB25241E6E3C005B2023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				7CFDAB55241E6EDB005B2023 /* ChatListViewController.swift */,
 				7C494E79242254EB00E1399C /* ChatRoomViewController.swift */,
 				7CC6A595242CDEE900737DFA /* SignUpViewController.swift */,
+				7CE98D08242F687800A0AAA5 /* UserListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				7CFDAB53241E6E6D005B2023 /* ChatList.storyboard */,
 				7C494E772422548800E1399C /* ChatRoom.storyboard */,
 				7CC6A593242CD9D200737DFA /* SignUp.storyboard */,
+				7CE98D06242F678A00A0AAA5 /* UserList.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE98D07242F678A00A0AAA5 /* UserList.storyboard in Resources */,
 				7C494E7C242257B600E1399C /* ChatRoomTableViewCell.xib in Resources */,
 				7CE98D01242F1C5C00A0AAA5 /* GoogleService-Info.plist in Resources */,
 				7CFDAB30241E6E3D005B2023 /* LaunchScreen.storyboard in Resources */,
@@ -498,6 +505,7 @@
 				7CC6A596242CDEE900737DFA /* SignUpViewController.swift in Sources */,
 				7C494E762422527600E1399C /* UIColor-Extension.swift in Sources */,
 				7C494E7A242254EB00E1399C /* ChatRoomViewController.swift in Sources */,
+				7CE98D09242F687800A0AAA5 /* UserListViewController.swift in Sources */,
 				7CE98D05242F589F00A0AAA5 /* User.swift in Sources */,
 				7CFDAB56241E6EDB005B2023 /* ChatListViewController.swift in Sources */,
 				7C494E7E2422592100E1399C /* ChatRoomTableViewCell.swift in Sources */,
