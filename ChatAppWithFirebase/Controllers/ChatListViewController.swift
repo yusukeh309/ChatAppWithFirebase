@@ -8,10 +8,13 @@
 
 import UIKit
 import Firebase
+import Nuke
 
 class ChatListViewController: UIViewController {
     
     private let cellId = "cellId"
+    private var chatroooms = [ChatRoom]()
+    
     private var user: User? {
         didSet {
             navigationItem.title = user?.username
@@ -26,6 +29,51 @@ class ChatListViewController: UIViewController {
         setupViews()
         confirmLoggedInUser()
         fetchLoginUserInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchChatroomsInfoFromFirestore()
+    }
+    
+    private func fetchChatroomsInfoFromFirestore() {
+        Firestore.firestore().collection("chatRooms").getDocuments { (snapshots, err) in
+            if let err = err {
+                print("ChatRooms情報の取得に失敗しました。\(err)")
+                return
+            }
+            
+            snapshots?.documents.forEach({ (snapshot) in
+                let dic = snapshot.data()
+                let chatroom = ChatRoom(dic: dic)
+                
+                guard let uid = Auth.auth().currentUser?.uid else { return }
+                chatroom.memebers.forEach { (memberUid) in
+                    if memberUid != uid {
+                        Firestore.firestore().collection("users").document(memberUid).getDocument { (snaoshot, err) in
+                            if let err = err {
+                                print("ユーザー情報の取得に失敗しました。\(err)")
+                                return
+                            }
+                                                        
+                            guard let dic = snaoshot?.data() else { return }
+                            let user = User(dic: dic)
+                            user.uid = snapshot.documentID
+                            
+                            chatroom.partnerUser = user
+                            self.chatroooms.append(chatroom)
+                            print("self.chatroooms.count: ", self.chatroooms.count)
+                            self.chatListTableView.reloadData()
+                            
+                        }
+                        
+                    }
+                }
+            })
+            
+        }
+        
     }
     
     private func setupViews() {
@@ -55,6 +103,7 @@ class ChatListViewController: UIViewController {
         let storyboard = UIStoryboard.init(name: "UserList", bundle: nil)
         let userListViewControlelr = storyboard.instantiateViewController(withIdentifier: "UserListViewController")
         let nav = UINavigationController(rootViewController: userListViewControlelr)
+        nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: true, completion: nil)
     }
     
@@ -84,12 +133,12 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return chatroooms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ChatListTableViewCell
-        
+        cell.chatroom = chatroooms[indexPath.row]
         return cell
     }
     
@@ -104,14 +153,27 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
 
 class ChatListTableViewCell: UITableViewCell {
     
-    var user: User? {
+//    var user: User? {
+//        didSet {
+//            if let user = user {
+//                partnerLabel.text = user.username
+//
+//                //            userImageView.image = user?.profileImageUrl
+//                dateLabel.text = dateFormatterForDateLabel(date: user.createdAt.dateValue())
+//                latestMessageLabel.text = user.email
+//            }
+//        }
+//    }
+    
+    var chatroom: ChatRoom? {
         didSet {
-            if let user = user {
-                partnerLabel.text = user.username
+            if let chatroom = chatroom {
+                partnerLabel.text = chatroom.partnerUser?.username
                 
-                //            userImageView.image = user?.profileImageUrl
-                dateLabel.text = dateFormatterForDateLabel(date: user.createdAt.dateValue())
-                latestMessageLabel.text = user.email
+                guard let url = URL(string: chatroom.partnerUser?.profileImageUrl ?? "") else { return }
+                Nuke.loadImage(with: url, into: userImageView)
+                
+                dateLabel.text = dateFormatterForDateLabel(date: chatroom.createdAt.dateValue())
             }
         }
     }
@@ -134,7 +196,7 @@ class ChatListTableViewCell: UITableViewCell {
     private func dateFormatterForDateLabel(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .full
-        formatter.timeStyle = .short
+        formatter.timeStyle = .none
         formatter.locale = Locale(identifier: "ja_JP")
         return formatter.string(from: date)
     }
