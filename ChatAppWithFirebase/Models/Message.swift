@@ -16,6 +16,8 @@ class Message {
     let uid: String
     let createdAt: Timestamp
     
+    var partnerUser: User?
+    
     init(dic: [String: Any]) {
         self.name = dic["name"] as? String ?? ""
         self.message = dic["message"] as? String ?? ""
