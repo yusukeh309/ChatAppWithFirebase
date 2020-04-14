@@ -38,7 +38,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここにメッセージがはいります" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Q4-DY-2R1">
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="ここにメッセージがはいります" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Q4-DY-2R1">
                         <rect key="frame" x="197" y="25" width="255" height="84"/>
                         <color key="backgroundColor" red="0.60392156862745094" green="0.8784313725490196" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
