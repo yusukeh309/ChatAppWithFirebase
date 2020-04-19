@@ -20,6 +20,8 @@
 		7C6381B924307EB1003DF160 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6381B824307EB1003DF160 /* ChatRoom.swift */; };
 		7CC6A594242CD9D200737DFA /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC6A593242CD9D200737DFA /* SignUp.storyboard */; };
 		7CC6A596242CDEE900737DFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6A595242CDEE900737DFA /* SignUpViewController.swift */; };
+		7CCD9718244C28F400FDC2B2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD9717244C28F400FDC2B2 /* Login.storyboard */; };
+		7CCD971A244C2A5F00FDC2B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9719244C2A5F00FDC2B2 /* LoginViewController.swift */; };
 		7CE98D01242F1C5C00A0AAA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CE98D00242F1C5C00A0AAA5 /* GoogleService-Info.plist */; };
 		7CE98D05242F589F00A0AAA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE98D04242F589F00A0AAA5 /* User.swift */; };
 		7CE98D07242F678A00A0AAA5 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE98D06242F678A00A0AAA5 /* UserList.storyboard */; };
@@ -66,6 +68,8 @@
 		7C6381B824307EB1003DF160 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		7CC6A593242CD9D200737DFA /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		7CC6A595242CDEE900737DFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7CCD9717244C28F400FDC2B2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7CCD9719244C2A5F00FDC2B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7CE98D00242F1C5C00A0AAA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CE98D04242F589F00A0AAA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CE98D06242F678A00A0AAA5 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				7C494E79242254EB00E1399C /* ChatRoomViewController.swift */,
 				7CC6A595242CDEE900737DFA /* SignUpViewController.swift */,
 				7CE98D08242F687800A0AAA5 /* UserListViewController.swift */,
+				7CCD9719244C2A5F00FDC2B2 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				7C494E772422548800E1399C /* ChatRoom.storyboard */,
 				7CC6A593242CD9D200737DFA /* SignUp.storyboard */,
 				7CE98D06242F678A00A0AAA5 /* UserList.storyboard */,
+				7CCD9717244C28F400FDC2B2 /* Login.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				7CFDAB54241E6E6D005B2023 /* ChatList.storyboard in Resources */,
 				7C11CD6A2425B2FF00EE9AD4 /* ChatInputAccessoryView.xib in Resources */,
 				7CC6A594242CD9D200737DFA /* SignUp.storyboard in Resources */,
+				7CCD9718244C28F400FDC2B2 /* Login.storyboard in Resources */,
 				7C494E782422548800E1399C /* ChatRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +524,7 @@
 				7C494E7E2422592100E1399C /* ChatRoomTableViewCell.swift in Sources */,
 				7C51B553243874CC00F1E510 /* Message.swift in Sources */,
 				7CFDAB26241E6E3C005B2023 /* SceneDelegate.swift in Sources */,
+				7CCD971A244C2A5F00FDC2B2 /* LoginViewController.swift in Sources */,
 				7C6381B924307EB1003DF160 /* ChatRoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
