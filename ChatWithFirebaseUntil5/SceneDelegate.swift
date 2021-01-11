@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ChatAppWithFirebase
+//  ChatWithFirebaseUntil5
 //
-//  Created by Uske on 2020/03/15.
+//  Created by Uske on 2020/04/20.
 //  Copyright © 2020 Uske. All rights reserved.
 //
 
@@ -24,7 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let nav = UINavigationController(rootViewController: chatListViewController)
         
         window.rootViewController = nav
-        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

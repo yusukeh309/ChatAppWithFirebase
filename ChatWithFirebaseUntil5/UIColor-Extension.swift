@@ -1,9 +1,9 @@
 //
 //  UIColor-Extension.swift
-//  ChatAppWithFirebase
+//  ChatWithFirebaseUntil5
 //
-//  Created by Uske on 2020/03/18.
-//  Copyright © 2020 Uske. All rights reserved.
+//  Created by Uske on 2021/01/11.
+//  Copyright © 2021 Uske. All rights reserved.
 //
 
 import UIKit
@@ -15,3 +15,4 @@ extension UIColor {
     }
     
 }
+

@@ -1,8 +1,8 @@
 //
 //  ChatListViewController.swift
-//  ChatAppWithFirebase
+//  ChatWithFirebaseUntil5
 //
-//  Created by Uske on 2020/03/15.
+//  Created by Uske on 2020/04/20.
 //  Copyright © 2020 Uske. All rights reserved.
 //
 
@@ -13,6 +13,7 @@ class ChatListViewController: UIViewController {
     private let cellId = "cellId"
     
     @IBOutlet weak var chatListTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +41,15 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped table view")
+        print(#function)
         let storyboard = UIStoryboard.init(name: "ChatRoom", bundle: nil)
-        let chatRoomViewController = storyboard.instantiateViewController(withIdentifier: "ChatRoomViewController")
+        let chatRoomViewController = storyboard.instantiateViewController(identifier: "ChatRoomViewController")
         navigationController?.pushViewController(chatRoomViewController, animated: true)
+        
     }
     
 }
@@ -71,4 +72,3 @@ class ChatListTableViewCell: UITableViewCell {
     }
     
 }
-

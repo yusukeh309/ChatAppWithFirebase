@@ -1,14 +1,14 @@
 //
-//  ChatAppWithFirebaseUITests.swift
-//  ChatAppWithFirebaseUITests
+//  ChatWithFirebaseUntil5UITests.swift
+//  ChatWithFirebaseUntil5UITests
 //
-//  Created by Uske on 2020/03/15.
+//  Created by Uske on 2020/04/20.
 //  Copyright © 2020 Uske. All rights reserved.
 //
 
 import XCTest
 
-class ChatAppWithFirebaseUITests: XCTestCase {
+class ChatWithFirebaseUntil5UITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

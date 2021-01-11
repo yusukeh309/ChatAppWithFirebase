@@ -1,23 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "vince_carter.jpeg",
       "idiom" : "universal",
-      "filename" : "send-icon.png",
       "scale" : "1x"
     },
     {
+      "filename" : "vince_carter-1.jpeg",
       "idiom" : "universal",
-      "filename" : "send-icon-1.png",
       "scale" : "2x"
     },
     {
+      "filename" : "vince_carter-2.jpeg",
       "idiom" : "universal",
-      "filename" : "send-icon-2.png",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }
