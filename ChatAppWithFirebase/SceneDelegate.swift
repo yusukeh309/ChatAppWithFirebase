@@ -2,8 +2,7 @@
 //  SceneDelegate.swift
 //  ChatAppWithFirebase
 //
-//  Created by Uske on 2020/03/15.
-//  Copyright © 2020 Uske. All rights reserved.
+//  Created by Uske on 2021/01/11.
 //
 
 import UIKit
@@ -19,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        let storyboard = UIStoryboard(name: "ChatList", bundle: nil)
-        let chatListViewController = storyboard.instantiateViewController(identifier: "ChatListViewController")
+        let storybaord = UIStoryboard(name: "ChatList", bundle: nil)
+        let chatListViewController = storybaord.instantiateViewController(identifier: "ChatListViewController")
         let nav = UINavigationController(rootViewController: chatListViewController)
         
         window.rootViewController = nav
@@ -32,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {

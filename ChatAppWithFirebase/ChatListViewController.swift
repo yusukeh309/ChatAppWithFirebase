@@ -2,8 +2,7 @@
 //  ChatListViewController.swift
 //  ChatAppWithFirebase
 //
-//  Created by Uske on 2020/03/15.
-//  Copyright © 2020 Uske. All rights reserved.
+//  Created by Uske on 2021/01/11.
 //
 
 import UIKit
@@ -19,10 +18,6 @@ class ChatListViewController: UIViewController {
         
         chatListTableView.delegate = self
         chatListTableView.dataSource = self
-        
-        navigationController?.navigationBar.barTintColor = .rgb(red: 39, green: 49, blue: 69)
-        navigationItem.title = "トーク"
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
 }
@@ -40,15 +35,7 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped table view")
-        let storyboard = UIStoryboard.init(name: "ChatRoom", bundle: nil)
-        let chatRoomViewController = storyboard.instantiateViewController(withIdentifier: "ChatRoomViewController")
-        navigationController?.pushViewController(chatRoomViewController, animated: true)
     }
     
 }
@@ -56,7 +43,7 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
 class ChatListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var partnerLabel: UILabel!
-    @IBOutlet weak var latestMessageLabel: UILabel!
+    @IBOutlet weak var latestMssageLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -71,4 +58,3 @@ class ChatListTableViewCell: UITableViewCell {
     }
     
 }
-
